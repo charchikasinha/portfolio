@@ -20,7 +20,7 @@ export const signals: Signal[] = [
     date: '05.10.26',
     thought: '[One line on what caught your attention at a Design × Tech event this week.]',
     kind: 'Place / Event',
-    image: '/signals/001.jpg', // TODO: replace with your own photo from tonight
+    image: '/signals/001.jpg', // stand-in still life (rendered); replace with a real photo
     ink: 'mono',
   },
 ];
