@@ -22,8 +22,9 @@ export default function AboutPage() {
       <main id="main" className="wrap">
         <div className="about">
           <div>
-            <div className="portrait dith" role="img" aria-label="Portrait placeholder" />
-            <div className="mono muted" style={{ marginTop: 10 }}>[Your portrait — dithered like the signals]</div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img className="portrait" src="/portrait.png" alt={`Portrait of ${site.name}`} style={{ width: '100%', objectFit: 'cover', imageRendering: 'pixelated' }} />
+            <div className="mono muted" style={{ marginTop: 10 }}>Fig. 00 — Berkeley, 2026</div>
           </div>
           <div>
             <p className="lede">{site.statement}</p>
