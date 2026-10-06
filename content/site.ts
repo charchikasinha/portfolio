@@ -15,5 +15,5 @@ export const site = {
     PM: '/resume/Charchika-Sinha-Resume-PM.pdf',
     PMM: '/resume/Charchika-Sinha-Resume-PMM.pdf',
   },
-  updated: '05.10.26',
+  updated: '06.10.26',
 };
