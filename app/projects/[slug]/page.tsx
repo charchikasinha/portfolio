@@ -48,7 +48,14 @@ export default async function ProjectPage({ params }: Params) {
         </div>
         <div className="hero">
           {pg.hero.kind === 'video' ? (
-            <div className="video"><div className="play" aria-hidden="true">▶</div><span className="mono">{pg.hero.caption}</span></div>
+            pg.hero.src ? (
+              <figure style={{ margin: 0 }}>
+                <video src={pg.hero.src} poster={pg.hero.poster} autoPlay muted loop playsInline controls preload="metadata" aria-label={pg.hero.caption} style={{ width: '100%', display: 'block', border: '1px solid var(--ink)', background: 'var(--ink)' }} />
+                <figcaption className="mono muted" style={{ marginTop: 10 }}>{pg.hero.caption}</figcaption>
+              </figure>
+            ) : (
+              <div className="video"><div className="play" aria-hidden="true">▶</div><span className="mono">{pg.hero.caption}</span></div>
+            )
           ) : (
             // eslint-disable-next-line @next/next/no-img-element
             <img src={pg.hero.src} alt={pg.hero.alt} style={{ width: '100%', border: '1px solid var(--ink)' }} />
