@@ -98,6 +98,7 @@ export const projects: Project[] = [
         { label: 'Role', value: 'Concept, product design, build' },
         { label: 'Team', value: '[Teammates]' },
         { label: 'Built with', value: 'Lovable · Claude · React · TanStack · Tailwind' },
+        { label: 'Code', value: 'GitHub ↗', href: 'https://github.com/charchikasinha/name-futures' },
         { label: 'Live demo', value: 'Try a name ↗', href: 'https://name-futures.lovable.app' },
       ],
       hero: { kind: 'image', src: '/projects/baby-perfect/1-home.jpg', alt: 'Baby Perfect home: “Weigh every name before it’s forever.” on a cobalt band with pink jungle animals, above the name form and shortlist' },
