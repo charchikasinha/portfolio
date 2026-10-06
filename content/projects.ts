@@ -31,38 +31,36 @@ export const projects: Project[] = [
       facts: [
         { label: 'Context', value: 'Visko Orbis Online Challenge, Sep 2026' },
         { label: 'Role', value: 'Concept, product design, build' },
-        { label: 'Built with', value: 'Next.js · Reactor SDK · Gemini' },
+        { label: 'Built with', value: 'Claude · Orbis via Reactor SDK · Gemini · Next.js · Pen.dev' },
         { label: 'Code', value: 'GitHub ↗', href: 'https://github.com/charchikasinha/living-storyboard' },
       ],
       hero: { kind: 'video', caption: 'Demo video — [link coming]' },
       sections: [
         {
           kind: 'text',
-          heading: 'The idea',
-          body: [
-            'Treat a real-time video model as a camera on set. You set the scene, roll, and direct while the shot plays — each direction lands in about two seconds and the shot carries on. Every run is recorded, so you can rewind to any moment and branch a new take from there.',
-          ],
-        },
-        {
-          kind: 'text',
           heading: 'Why I made it',
           body: [
-            'Directors don’t work in prompts; they work in takes — “again, slower”, “from there, have him turn around”. Static storyboards don’t move, and 3D previz takes days. Clip-based models make you prompt, wait, and start over when one thing is wrong.',
+            'A director has to get a whole film out of their head and into everyone else’s — producers, actors, the camera team. The usual tool for that is a storyboard, drawn by hand, shot by shot, and it doesn’t move. Living Storyboard lets a director see the shot instead: describe it, watch it play, and steer it until it matches what they imagined.',
           ],
         },
         {
           kind: 'steps',
           heading: 'How it works',
           steps: [
-            { title: 'Direct while it rolls.', text: 'Type, speak, or tap pills for camera, lens and mood; the live shot changes without restarting.' },
-            { title: 'Redirect from here.', text: 'Scrub the tape, pick a moment, and branch T1 → T2 → T3 — a tree of takes instead of a pile of clips.' },
-            { title: 'Build the board.', text: 'Star stills to make panels, reorder, caption, pick 2.39:1 or 16:9, and print or present.' },
+            { title: 'Prep.', text: 'A co-writer turns a one-line brief into shot-by-shot prompts you can fire in order.' },
+            { title: 'Direct live.', text: 'Type or speak a direction while the shot plays; it changes in about two seconds without restarting.' },
+            { title: 'Keep every take.', text: 'Everything is recorded. Rewind to any moment and branch a new take from there — T1 → T2 → T3, like version control for a scene.' },
+            { title: 'Build the board.', text: 'When a moment looks right, capture a still. Starred stills become a storyboard you can reorder, caption and share.' },
           ],
         },
         {
-          kind: 'text',
+          kind: 'steps',
           heading: 'What I did',
-          body: ['[Two or three lines in your words — how you framed the director’s workflow, the decisions you made about takes and branching, what you built vs. reused from the starter.]'],
+          steps: [
+            { title: 'Product & direction.', text: 'Framed the problem (previz is either static or slow), defined the director’s workflow from prep to shoot to board, and decided what to build.' },
+            { title: 'Design.', text: 'Explored layouts and redesign ideas in Pen.dev, then chose and refined a paper-and-ink “poster” look in Claude so it feels like a tool on set, not a website.' },
+            { title: 'Build & ship.', text: 'Built it with Claude as my engineering partner: tested live with Orbis, iterated on every screen, and shipped the repo, README and demo for the Visko Orbis challenge.' },
+          ],
         },
         {
           kind: 'artifacts',
@@ -71,13 +69,17 @@ export const projects: Project[] = [
             { label: 'A — Takes as a tree', diagram: 'takes-tree' },
             { label: 'B — Directing live', placeholder: '[Screenshot: live directing]' },
             { label: 'C — The storyboard', placeholder: '[Screenshot: storyboard sheet]' },
-            { label: 'D — Process', placeholder: '[Early sketch or failed UI]' },
+            { label: 'D — Layout explorations', placeholder: '[Pen.dev explorations]' },
           ],
         },
         {
-          kind: 'text',
+          kind: 'steps',
           heading: 'What I learned',
-          body: ['[One honest lesson — about real-time models, about directors, or about scoping a hackathon build.]'],
+          steps: [
+            { title: 'On usability.', text: 'The hardest part wasn’t the AI, it was restraint. Every control I added made the tool feel less like a camera on set. The breakthroughs were subtractions: cutting sliders, merging modes, and one rule (“if you can type in it, it looks typeable”) that made the whole interface click.' },
+            { title: 'On real-time models.', text: 'A real-time model only moves forward, but directors live in rewind. The most valuable feature wasn’t generating video. It was letting a director go back to any moment and branch a new take from there.' },
+            { title: 'On directors.', text: 'Directors don’t think in prompts, they think in takes: “again, slower,” “from there, have him turn.” Designing for that, instead of for the model, changed almost every decision.' },
+          ],
         },
       ],
     },

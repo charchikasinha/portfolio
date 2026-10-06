@@ -188,3 +188,6 @@ button{font:inherit;color:inherit}
 .resume .toggle a:hover{background:var(--ink);color:var(--paper)}
 .skip{position:absolute;left:-9999px}.skip:focus{left:16px;top:16px;background:var(--paper);padding:8px;z-index:50}
 @media (max-width:820px){.cp{grid-template-columns:1fr}}
+.journey-intro{font-size:clamp(28px,3vw,42px);line-height:1.15;font-style:italic;max-width:900px;margin:40px 0 8px}
+.journey-body{font-size:21px;line-height:1.5;color:var(--ink2);max-width:760px;margin:0 0 16px}
+.proof{display:inline-flex;align-items:center;gap:10px;border-top:1px solid var(--rule);padding-top:12px;font-size:10px}

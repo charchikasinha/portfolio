@@ -30,7 +30,7 @@ export default function AboutPage() {
             <p className="lede">{site.statement}</p>
             <div className="bio">
               <p>I grew up aboard a merchant ship, docking in more than twenty countries before I was nine. Moving that often taught me to read new places quickly, and I’ve been crossing between worlds ever since.</p>
-              <p>I studied engineering and then data science and AI, while keeping a long-running art practice. For three years I owned products at Plat4mation in Belgium — HR, research and public-sector platforms — and led AI adoption, while art-directing campaigns, identities and album covers on the side.</p>
+              <p>I studied data science and AI while keeping a long-running art practice. For three years I owned products at Plat4mation in Belgium — HR, research and public-sector platforms — and led AI adoption, while art-directing campaigns, identities and album covers on the side.</p>
               <p>Now I’m at Berkeley Haas, working toward product roles where technology and taste meet.</p>
             </div>
             <div style={{ marginTop: 28 }}><ResumeLinks /></div>

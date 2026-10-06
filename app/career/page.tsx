@@ -2,8 +2,7 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ResumeLinks from '@/components/ResumeLinks';
-import CareerTimeline from '@/components/CareerTimeline';
-import { career, evidence } from '@/content/career';
+import { careerIntro, chapters } from '@/content/career';
 
 export const metadata: Metadata = { title: 'Career' };
 
@@ -16,16 +15,24 @@ export default function CareerPage() {
           <h1>Career</h1>
           <div className="side"><ResumeLinks /></div>
         </div>
-        <div className="evid">
-          {evidence.map(e => (
-            <div key={e.label}>
-              <span className="mono muted">{e.label}</span>
-              <b>{e.value}</b>
-              <span>{e.text}</span>
-            </div>
+        <p className="journey-intro">{careerIntro}</p>
+        <div className="tl">
+          {chapters.map(c => (
+            <article className="entry" key={c.n}>
+              <div className="mono" style={{ paddingTop: 10, display: 'flex', flexDirection: 'column', gap: 6 }}>
+                <span>{c.n}</span>
+                <span className="muted">{c.years}</span>
+              </div>
+              <div>
+                <h3>{c.title}</h3>
+                <div className="desc" style={{ marginTop: 12 }}>{c.where}</div>
+                <p className="journey-body">{c.body}</p>
+                {c.proof && <div className="proof mono"><span className="dot" />{c.proof}</div>}
+              </div>
+            </article>
           ))}
         </div>
-        <CareerTimeline entries={career} />
+        <div style={{ padding: '40px 0 0' }}><ResumeLinks /></div>
       </main>
       <Footer />
     </>
