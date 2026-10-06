@@ -4,7 +4,8 @@
 export type Section =
   | { kind: 'text'; heading: string; body: string[] }
   | { kind: 'steps'; heading: string; steps: { title: string; text: string }[] }
-  | { kind: 'artifacts'; heading: string; items: { label: string; placeholder?: string; diagram?: 'takes-tree'; image?: string }[] };
+  | { kind: 'artifacts'; heading: string; items: { label: string; placeholder?: string; diagram?: 'takes-tree'; image?: string }[] }
+  | { kind: 'gallery'; heading: string; items: { src: string; caption: string; alt: string }[] };
 
 export type Project = {
   slug: string;
@@ -34,7 +35,7 @@ export const projects: Project[] = [
         { label: 'Built with', value: 'Claude · Orbis via Reactor SDK · Gemini · Next.js · Pen.dev' },
         { label: 'Code', value: 'GitHub ↗', href: 'https://github.com/charchikasinha/living-storyboard' },
       ],
-      hero: { kind: 'video', caption: 'Demo video — [link coming]' },
+      hero: { kind: 'image', src: '/projects/living-storyboard/1-shelf.jpg', alt: 'Living Storyboard home: a shelf of productions with Ridgeline - SUV Ad featured' }, // swap to the demo video when ready
       sections: [
         {
           kind: 'text',
@@ -63,13 +64,13 @@ export const projects: Project[] = [
           ],
         },
         {
-          kind: 'artifacts',
-          heading: 'Artifacts',
+          kind: 'gallery',
+          heading: 'Inside the tool',
           items: [
-            { label: 'A — Takes as a tree', diagram: 'takes-tree' },
-            { label: 'B — Directing live', placeholder: '[Screenshot: live directing]' },
-            { label: 'C — The storyboard', placeholder: '[Screenshot: storyboard sheet]' },
-            { label: 'D — Layout explorations', placeholder: '[Pen.dev explorations]' },
+            { src: '/projects/living-storyboard/2-studio.jpg', alt: 'The studio with a shot on stage', caption: 'The studio: prep on the left, the live shot in the middle, direction and camera controls on the right.' },
+            { src: '/projects/living-storyboard/3-tape-and-takes.jpg', alt: 'The tape and branched takes', caption: 'Every run is recorded to tape. Take 2 branched from Take 1 at 00:36.' },
+            { src: '/projects/living-storyboard/4-storyboard.jpg', alt: 'The storyboard sheet', caption: 'Eight panels from two shots. Captions fill in from the direction at that moment.' },
+            { src: '/projects/living-storyboard/5-present.jpg', alt: 'Present mode', caption: 'Present mode: the hand-off to cast and crew, shot by shot.' },
           ],
         },
         {

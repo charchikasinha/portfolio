@@ -191,3 +191,16 @@ button{font:inherit;color:inherit}
 .journey-intro{font-size:clamp(28px,3vw,42px);line-height:1.15;font-style:italic;max-width:900px;margin:40px 0 8px}
 .journey-body{font-size:21px;line-height:1.5;color:var(--ink2);max-width:760px;margin:0 0 16px}
 .proof{display:inline-flex;align-items:center;gap:10px;border-top:1px solid var(--rule);padding-top:12px;font-size:10px}
+.gsec{padding:40px 0;border-top:1px solid var(--rule)}
+.gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:40px 32px}
+.gallery figure{margin:0;display:flex;flex-direction:column;gap:12px}
+.gallery button{padding:0;border:1px solid var(--ink);background:none;cursor:zoom-in;display:block}
+.gallery img{width:100%;height:auto;display:block}
+.gallery figcaption{display:grid;grid-template-columns:36px 1fr;gap:8px;font-size:19px;line-height:1.4;color:var(--ink2)}
+.gallery figcaption .mono{padding-top:4px}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(20,20,19,.92);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:24px;cursor:zoom-out}
+.lightbox img{max-width:min(1600px,100%);max-height:calc(100vh - 120px);object-fit:contain;cursor:default;border:1px solid #3a3a37}
+.lb-bar{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;color:var(--paper);cursor:default;text-align:center}
+.lb-bar button{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;min-height:44px;min-width:44px;padding:0 14px;border:1px solid var(--paper);background:transparent;color:var(--paper);cursor:pointer}
+.lb-bar button:hover{background:var(--paper);color:var(--ink)}
+@media (max-width:820px){.gallery{grid-template-columns:1fr}}

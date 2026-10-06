@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import TakesTree from '@/components/TakesTree';
+import Gallery from '@/components/Gallery';
 import { projects } from '@/content/projects';
 
 type Params = { params: Promise<{ slug: string }> };
@@ -53,7 +54,12 @@ export default async function ProjectPage({ params }: Params) {
             <img src={pg.hero.src} alt={pg.hero.alt} style={{ width: '100%', border: '1px solid var(--ink)' }} />
           )}
         </div>
-        {pg.sections.map(s => (
+        {pg.sections.map(s => s.kind === 'gallery' ? (
+          <section className="gsec" key={s.heading}>
+            <h2 className="mono" style={{ margin: '0 0 24px', fontWeight: 500 }}>{s.heading}</h2>
+            <Gallery items={s.items} />
+          </section>
+        ) : (
           <section className="sec" key={s.heading}>
             <h2>{s.heading}</h2>
             {s.kind === 'text' && <div className="body">{s.body.map((b, i) => <p key={i}>{b}</p>)}</div>}
