@@ -162,7 +162,7 @@ export const projects: Project[] = [
   { slug: 'this-site', title: 'This site', meta: ['Web / Generative', 'Design & build'], year: '2026', status: 'In progress' },
   {
     slug: 'blue-jay',
-    title: 'Blue Jay',
+    title: 'Blue Jay Eindhoven',
     meta: ['AI / Hardware', 'Edge AI · Team lead'],
     year: '2018–19',
     page: {
@@ -194,7 +194,7 @@ export const projects: Project[] = [
           kind: 'steps',
           heading: 'What I did',
           steps: [
-            { title: 'Built the AI team.', text: 'Started Blue Jay’s first AI sub-team and grew it to seven engineers.' },
+            { title: 'Built the AI team.', text: 'Started Blue Jay Eindhoven’s first AI sub-team and grew it to seven engineers.' },
             { title: 'Data & models.', text: 'We collected and hand-labelled our own training data and built the detection models in Python and TensorFlow, working with SAS and Philips on models and data.' },
             { title: 'Roadmap & feasibility.', text: 'Owned the AI backlog and sat with the other leads — hardware, software, human–technology interaction — to decide what the drone could realistically do.' },
             { title: 'Telling the story.', text: 'Presented the drone at the SAS Analytics Forum and other events and AI talks, explaining computer vision and edge AI to technical and non-technical audiences.' },
