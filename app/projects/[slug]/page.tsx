@@ -64,7 +64,24 @@ export default async function ProjectPage({ params }: Params) {
         {pg.sections.map(s => s.kind === 'gallery' ? (
           <section className="gsec" key={s.heading}>
             <h2 className="mono" style={{ margin: '0 0 24px', fontWeight: 500 }}>{s.heading}</h2>
-            <Gallery items={s.items} />
+            <Gallery items={s.items} aspect={s.aspect} />
+          </section>
+        ) : s.kind === 'youtube' ? (
+          <section className="sec" key={s.heading}>
+            <h2>{s.heading}</h2>
+            <figure style={{ margin: 0 }}>
+              <div style={{ aspectRatio: '16 / 9', border: '1px solid var(--ink)', background: 'var(--ink)' }}>
+                <iframe
+                  src={`https://www.youtube-nocookie.com/embed/${s.id}?start=${s.start ?? 0}${s.end ? `&end=${s.end}` : ''}&rel=0&modestbranding=1`}
+                  title={s.heading}
+                  loading="lazy"
+                  allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ width: '100%', height: '100%', border: 0, display: 'block' }}
+                />
+              </div>
+              <figcaption className="mono muted" style={{ marginTop: 10, lineHeight: 1.7 }}>{s.caption}</figcaption>
+            </figure>
           </section>
         ) : (
           <section className="sec" key={s.heading}>

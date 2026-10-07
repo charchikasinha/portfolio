@@ -5,7 +5,8 @@ export type Section =
   | { kind: 'text'; heading: string; body: string[] }
   | { kind: 'steps'; heading: string; steps: { title: string; text: string }[] }
   | { kind: 'artifacts'; heading: string; items: { label: string; placeholder?: string; diagram?: 'takes-tree'; image?: string }[] }
-  | { kind: 'gallery'; heading: string; items: { src: string; caption: string; alt: string }[] };
+  | { kind: 'gallery'; heading: string; aspect?: string; items: { src: string; caption: string; alt: string; video?: boolean; poster?: string }[] }
+  | { kind: 'youtube'; heading: string; id: string; start?: number; end?: number; caption: string };
 
 export type Project = {
   slug: string;
@@ -159,6 +160,81 @@ export const projects: Project[] = [
     },
   },
   { slug: 'this-site', title: 'This site', meta: ['Web / Generative', 'Design & build'], year: '2026', status: 'In progress' },
-  { slug: 'blue-jay', title: 'Blue Jay', meta: ['AI / Hardware', 'Team lead'], year: '2018–19', status: 'Page coming' },
+  {
+    slug: 'blue-jay',
+    title: 'Blue Jay',
+    meta: ['AI / Hardware', 'Edge AI · Team lead'],
+    year: '2018–19',
+    page: {
+      summary: 'An autonomous drone that goes where rescuers can’t, spots people in distress and calls for help — with the AI running on the drone itself.',
+      facts: [
+        { label: 'Context', value: 'Blue Jay Eindhoven, deep-tech drone venture' },
+        { label: 'Role', value: 'Founder & lead, AI sub-team (7 engineers)' },
+        { label: 'Built with', value: 'Python · TensorFlow · Computer vision · NVIDIA Jetson Nano' },
+        { label: 'Partners', value: 'SAS · Philips' },
+      ],
+      hero: { kind: 'image', src: '/projects/blue-jay/psv-team.jpg', alt: 'The Blue Jay team with the drones on the pitch at PSV Stadium' },
+      sections: [
+        {
+          kind: 'text',
+          heading: 'Why it mattered',
+          body: ['In search and rescue, some areas are too dangerous to send people into first. A drone can go ahead — but only if it can recognise who needs help on its own, without relying on a connection back to base.'],
+        },
+        {
+          kind: 'steps',
+          heading: 'How it works',
+          steps: [
+            { title: 'Fly in.', text: 'The drone navigates autonomously into areas rescuers can’t safely reach.' },
+            { title: 'Detect distress.', text: 'An on-board vision model looks for people sitting or lying down, or showing signs of pain.' },
+            { title: 'Report back.', text: 'When it finds someone, it sends a notification to the rescue team.' },
+            { title: 'Think on the edge.', text: 'The model runs on the drone itself, so it keeps working without a connection.' },
+          ],
+        },
+        {
+          kind: 'steps',
+          heading: 'What I did',
+          steps: [
+            { title: 'Built the AI team.', text: 'Started Blue Jay’s first AI sub-team and grew it to seven engineers.' },
+            { title: 'Data & models.', text: 'We collected and hand-labelled our own training data and built the detection models in Python and TensorFlow, working with SAS and Philips on models and data.' },
+            { title: 'Roadmap & feasibility.', text: 'Owned the AI backlog and sat with the other leads — hardware, software, human–technology interaction — to decide what the drone could realistically do.' },
+            { title: 'Telling the story.', text: 'Presented the drone at Dutch Design Week, the SAS Analytics Forum and Brainport events, explaining computer vision and edge AI to technical and non-technical audiences.' },
+          ],
+        },
+        {
+          kind: 'gallery',
+          heading: 'From the project',
+          aspect: '4 / 5',
+          items: [
+            { src: '/projects/blue-jay/psv-flight.mp4', poster: '/projects/blue-jay/psv-flight-poster.jpg', video: true, alt: 'Blue Jay drones flying inside PSV Stadium', caption: 'Demo day: the drones flying inside PSV Stadium.' },
+            { src: '/projects/blue-jay/ai-on-edge-stand.jpg', alt: 'Blue Jay stand with the AI on Edge search-and-rescue poster', caption: '“AI on Edge”: presenting the search-and-rescue use case.' },
+            { src: '/projects/blue-jay/lab.jpg', alt: 'Working at a computer with teammates in the Blue Jay lab', caption: 'In the lab with the team.' },
+            { src: '/projects/blue-jay/showcase.jpg', alt: 'Showcasing the Blue Jay drone at an event stand', caption: 'Showing the drone to visitors.' },
+          ],
+        },
+        {
+          kind: 'youtube',
+          heading: 'SAS Analytics Forum 2019',
+          id: 'MTrIkXwpLXA',
+          start: 56,
+          end: 68,
+          caption: 'From SAS Nederland’s video report of the SAS Analytics Forum 2019 — I appear from 0:56.',
+        },
+        {
+          kind: 'text',
+          heading: 'What happened next',
+          body: ['We demoed the drone live at PSV Stadium for city and university leaders. PSV and the city of Eindhoven then approached us about a second use case: crowd management.'],
+        },
+        {
+          kind: 'steps',
+          heading: 'What I learned',
+          steps: [
+            { title: 'On edge AI.', text: 'A model that works on a laptop is only half done. On a drone, every millisecond and every watt counts, so the real work was making the model small enough to run in the air.' },
+            { title: 'On data.', text: 'Off-the-shelf datasets didn’t show people in distress from above. Collecting and labelling our own data was slow, unglamorous, and the reason it worked.' },
+            { title: 'On leading.', text: 'Starting a team from zero meant deciding what not to build. Sitting with the other leads taught me that feasibility is a team conversation, not a solo call.' },
+          ],
+        },
+      ],
+    },
+  },
   { slug: 'welkom-online', title: 'Welkom Online', meta: ['Campaign', 'Storytelling & direction'], year: '[Year]', status: 'Page coming' },
 ];
