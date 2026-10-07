@@ -56,7 +56,7 @@ button{font:inherit;color:inherit}
 .row .y{font-family:var(--mono);font-size:11px;text-align:right}
 .row.hide{display:none}
 .wip{font-family:var(--mono);font-size:9px;letter-spacing:.14em;border:1px solid var(--ink);padding:3px 6px;margin-left:12px;vertical-align:middle;font-style:normal}
-.peek{position:fixed;left:0;top:0;width:220px;aspect-ratio:3/4;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.92);transition:opacity .18s,transform .18s;z-index:20;border:1px solid var(--ink);background:var(--paper);overflow:hidden}
+.peek{position:fixed;left:0;top:0;width:300px;aspect-ratio:16/10;pointer-events:none;opacity:0;transform:translate(-50%,-50%) scale(.92);transition:opacity .18s,transform .18s;z-index:20;border:1px solid var(--ink);background:var(--paper);overflow:hidden}
 .peek.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
 .peek img{width:100%;height:100%;object-fit:cover}
 .also{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 32px;padding:48px 0 0}

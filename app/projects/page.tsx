@@ -9,7 +9,11 @@ export const metadata: Metadata = { title: 'Projects' };
 
 export default function ProjectsPage() {
   const previews: Record<string, string> = {};
-  for (const p of projects) if (p.page?.hero.kind === 'image') previews[p.slug] = p.page.hero.src;
+  for (const p of projects) {
+    const h = p.page?.hero;
+    if (h?.kind === 'image') previews[p.slug] = h.src;
+    else if (h?.kind === 'video' && h.poster) previews[p.slug] = h.poster;
+  }
   return (
     <>
       <Header />
