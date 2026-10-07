@@ -169,7 +169,7 @@ export const projects: Project[] = [
       summary: 'An autonomous drone that goes where rescuers can’t, spots people in distress and calls for help — with the AI running on the drone itself.',
       facts: [
         { label: 'Context', value: 'Blue Jay Eindhoven, deep-tech drone venture' },
-        { label: 'Role', value: 'Founder & lead, AI sub-team (7 engineers)' },
+        { label: 'Role', value: 'Founder & lead of AI sub-team (7 engineers)' },
         { label: 'Built with', value: 'Python · TensorFlow · Computer vision · NVIDIA Jetson Nano' },
         { label: 'Partners', value: 'SAS · Philips' },
       ],
@@ -197,7 +197,7 @@ export const projects: Project[] = [
             { title: 'Built the AI team.', text: 'Started Blue Jay’s first AI sub-team and grew it to seven engineers.' },
             { title: 'Data & models.', text: 'We collected and hand-labelled our own training data and built the detection models in Python and TensorFlow, working with SAS and Philips on models and data.' },
             { title: 'Roadmap & feasibility.', text: 'Owned the AI backlog and sat with the other leads — hardware, software, human–technology interaction — to decide what the drone could realistically do.' },
-            { title: 'Telling the story.', text: 'Presented the drone at Dutch Design Week, the SAS Analytics Forum and Brainport events, explaining computer vision and edge AI to technical and non-technical audiences.' },
+            { title: 'Telling the story.', text: 'Presented the drone at the SAS Analytics Forum and other events and AI talks, explaining computer vision and edge AI to technical and non-technical audiences.' },
           ],
         },
         {
@@ -222,14 +222,15 @@ export const projects: Project[] = [
         {
           kind: 'text',
           heading: 'What happened next',
-          body: ['We demoed the drone live at PSV Stadium for city and university leaders. PSV and the city of Eindhoven then approached us about a second use case: crowd management.'],
+          body: ['PSV let us test our flights inside their stadium. The club and the city of Eindhoven stayed in touch about a possible next use case: crowd management.'],
         },
         {
           kind: 'steps',
           heading: 'What I learned',
           steps: [
-            { title: 'On edge AI.', text: 'A model that works on a laptop is only half done. On a drone, every millisecond and every watt counts, so the real work was making the model small enough to run in the air.' },
+            { title: 'On edge AI.', text: 'This was my first real work in AI, and running it on the device itself was still new territory. We ran several feasibility checks as a team on which hardware to use and how it would fit. Integrating it into the main drone failed a few times, so we built a second drone just for detection. The lesson: hardware decides what the AI can do.' },
             { title: 'On data.', text: 'Off-the-shelf datasets didn’t show people in distress from above. Collecting and labelling our own data was slow, unglamorous, and the reason it worked.' },
+            { title: 'On the full process.', text: 'I guided the ML process end to end, from collecting data to launch, and taught it to the team as we went. This is where I found out I love working with AI.' },
             { title: 'On leading.', text: 'Starting a team from zero meant deciding what not to build. Sitting with the other leads taught me that feasibility is a team conversation, not a solo call.' },
           ],
         },
