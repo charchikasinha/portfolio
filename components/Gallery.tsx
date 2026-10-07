@@ -23,7 +23,7 @@ export default function Gallery({ items }: { items: GalleryItem[] }) {
 
   return (
     <>
-      <div className="gallery">
+      <div className={items.length === 1 ? 'gallery single' : 'gallery'}>
         {items.map((it, i) => (
           <figure key={it.src}>
             <button type="button" onClick={() => setOpen(i)} aria-label={`Enlarge: ${it.alt}`}>
