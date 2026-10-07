@@ -191,6 +191,15 @@ export const projects: Project[] = [
           ],
         },
         {
+          kind: 'gallery',
+          heading: 'The drone',
+          aspect: '3 / 2',
+          items: [
+            { src: '/projects/blue-jay/main-drone.jpg', alt: 'The main Blue Jay drone on display at an event stand', caption: 'Our main drone, on display at the drones area.' },
+            { src: '/projects/blue-jay/explaining.jpg', alt: 'Explaining the drone to a guest at a Blue Jay event', caption: 'Walking a guest through how the drone works.' },
+          ],
+        },
+        {
           kind: 'steps',
           heading: 'What I did',
           steps: [

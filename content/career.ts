@@ -16,8 +16,8 @@ export const chapters: Chapter[] = [
     years: '2018 — 2019',
     title: 'Building',
     where: 'Blue Jay Eindhoven · AI sub-team lead',
-    body: 'My first product team was a deep-tech drone venture. I set up its AI sub-team, seven engineers, and we built an edge-AI search-and-rescue drone. Showing it to city leaders and at Dutch Design Week taught me early that a product only lands when people understand what it does for them.',
-    proof: 'Live demo at PSV Stadium',
+    body: 'This is where I first met AI. I set up Blue Jay Eindhoven’s AI sub-team, seven engineers teaching a drone to spot people in distress, with the model running on the drone itself at a time when edge AI was still new. Taking it from raw data to a working drone, and teaching the team as we went, is where I found out I love AI. Explaining it at events taught me that a product only lands when people understand what it does for them.',
+    proof: 'Test flights inside PSV Stadium',
   },
   {
     n: '02',
