@@ -307,9 +307,9 @@ export const projects: Project[] = [
           kind: 'steps',
           heading: 'What I learned',
           steps: [
-            { title: 'On directing for the first time.', text: 'This was my first time directing. Ideas I had only ever drawn or styled suddenly came with a crew, a schedule and a client attached.' },
-            { title: 'On planning.', text: 'Most of the film was decided before the shoot — in the script, the storyboard, the location visits and the pre-production meeting. The planning was the creative work.' },
-            { title: 'On defending a choice.', text: 'With production, casting, locations and art all weighing in, a creative call only held if we could explain how it served the brief.' },
+            { title: 'On a new medium.', text: 'This was my first time directing. I had always made things with paint or pixels; this time I was creating through story and collaboration.' },
+            { title: 'On trust.', text: 'The film and its actors were Dutch-speaking. I had to trust my co-director to carry every emotion into the language, learn the cultural nuances as we went, and still trust my own judgement on the vision.' },
+            { title: 'On scale.', text: 'Every decision shaped not just an image, but something seen by thousands of people across the Netherlands.' },
           ],
         },
       ],
