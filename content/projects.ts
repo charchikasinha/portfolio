@@ -101,7 +101,7 @@ export const projects: Project[] = [
         { label: 'Built with', value: 'Lovable · Claude · React · Tailwind' },
         { label: 'Live demo', value: 'name-futures.lovable.app ↗', href: 'https://name-futures.lovable.app' },
       ],
-      hero: { kind: 'image', src: '/projects/baby-perfect/home.jpg', alt: 'Baby Perfect home page: Weigh every name before it’s forever' },
+      hero: { kind: 'video', src: '/projects/baby-perfect/demo.mp4', poster: '/projects/baby-perfect/demo-poster.jpg', caption: 'Shortlisting names, running the forecast, and comparing the least bad option.' },
       sections: [
         {
           kind: 'text',
@@ -142,6 +142,7 @@ export const projects: Project[] = [
           kind: 'gallery',
           heading: 'Inside the product',
           items: [
+            { src: '/projects/baby-perfect/home.jpg', alt: 'Baby Perfect home page', caption: 'The home page: a sweet baby brand on the outside.' },
             { src: '/projects/baby-perfect/forecast.jpg', alt: 'Forecast cards: industry outlook, school and happiness', caption: 'The prospectus: industry outlook, school report and a happiness gauge stuck on “Permanent Monday.” All data simulated.' },
           ],
         },
