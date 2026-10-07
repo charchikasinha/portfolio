@@ -172,6 +172,7 @@ export const projects: Project[] = [
         { label: 'Role', value: 'Founder & lead of AI sub-team (7 engineers)' },
         { label: 'Built with', value: 'Python · TensorFlow · Computer vision · NLP · NVIDIA Jetson Nano' },
         { label: 'Partners', value: 'SAS · Philips' },
+        { label: 'Talk', value: 'Eindhoven Innovation Café · Mar 2019 ↗', href: 'https://ehvinnovationcafe.org/2019/03/' },
         { label: 'Press', value: 'Cursor, TU/e · June 2019 ↗', href: 'https://www.cursor.tue.nl/en/news/2019/juni/week-4/blue-jay-introduces-autonomous-drone-in-football-stadium' },
       ],
       hero: { kind: 'image', src: '/projects/blue-jay/psv-team.jpg', alt: 'The Blue Jay team with the drones on the pitch at PSV Stadium' },

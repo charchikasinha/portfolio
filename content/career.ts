@@ -76,7 +76,7 @@ export const roles: Role[] = [
     years: '2018 — 2019',
     tag: 'Build it',
     body: 'This is where I first met AI. I set up Blue Jay Eindhoven’s AI sub-team, seven engineers teaching a drone to spot people in distress, with the model running on the drone itself at a time when edge AI was still new. Taking it from raw data to a working drone, and teaching the team as we went, is where I found out I love AI.',
-    highlights: ['Live demo at PSV Stadium for the city, university leaders and partners'],
+    highlights: ['Live demo at PSV Stadium for the city, university leaders and partners', 'Speaker at the Eindhoven Innovation Café on everyday AI and personal assistants (2019)'],
     link: { label: 'See the project', href: '/projects/blue-jay' },
   },
   {
