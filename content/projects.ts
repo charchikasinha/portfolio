@@ -195,7 +195,7 @@ export const projects: Project[] = [
           heading: 'The drone',
           aspect: '3 / 2',
           items: [
-            { src: '/projects/blue-jay/main-drone.jpg', alt: 'A Blue Jay drone on display at an event stand', caption: 'A Blue Jay drone on display at the drones area.' },
+            { src: '/projects/blue-jay/main-drone.jpg', alt: 'The Blue Jay detection drone on display at an event stand', caption: 'The detection drone we built for the AI, with the Jetson on board.' },
             { src: '/projects/blue-jay/explaining.jpg', alt: 'Explaining the main Blue Jay drone to a guest at an event', caption: 'Walking a guest through our main drone.' },
           ],
         },
