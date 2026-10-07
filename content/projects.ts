@@ -231,7 +231,7 @@ export const projects: Project[] = [
         {
           kind: 'text',
           heading: 'What happened next',
-          body: ['PSV let us test our flights inside their stadium. The club and the city of Eindhoven stayed in touch about a possible next use case: crowd management.'],
+          body: ['We demoed the drone live at PSV Stadium for the city of Eindhoven, university leaders and guests from partners like Philips, SAS, IBM and Fourtress. That’s where crowd management came up as a possible next use case.'],
         },
         {
           kind: 'steps',
