@@ -265,7 +265,7 @@ export const projects: Project[] = [
         { label: 'Film', value: '“Grandpa’s Tall Tales” · shot July 2023' },
         { label: 'Aired', value: 'Dutch TV & station screens' },
       ],
-      hero: { kind: 'image', src: '/creative/welkom-online/monitor.jpg', alt: 'Watching a take on the monitor with my co-director on set' },
+      hero: { kind: 'video', src: '/creative/welkom-online/screening.mp4', poster: '/creative/welkom-online/screening-poster.jpg', caption: '“Grandpa’s Tall Tales” being presented, filmed from the audience.' },
       sections: [
         {
           kind: 'text',
@@ -298,9 +298,18 @@ export const projects: Project[] = [
           aspect: '4 / 5',
           items: [
             { src: '/creative/welkom-online/monitor-clip.mp4', poster: '/creative/welkom-online/monitor-clip-poster.jpg', video: true, alt: 'Slating a take of Grandpa’s Tall Tales, seen on the monitor', caption: 'Slating a take, seen from video village.' },
+            { src: '/creative/welkom-online/monitor-portrait.jpg', alt: 'Watching a take on the monitor with my co-director', caption: 'Watching a take with my co-director.' },
             { src: '/creative/welkom-online/on-comms.jpg', alt: 'On comms beside the monitor during the shoot', caption: 'On comms at the monitor between takes.' },
-            { src: '/creative/welkom-online/camera.jpg', alt: 'Camera on a dolly setting up a shot', caption: 'Setting up a shot.' },
             { src: '/creative/welkom-online/clapper.jpg', alt: 'Clapperboard for PlusPlusOne × VodafoneZiggo, Grandpa’s Tall Tales', caption: 'The slate, July 2023.' },
+          ],
+        },
+        {
+          kind: 'steps',
+          heading: 'What I learned',
+          steps: [
+            { title: 'On directing for the first time.', text: 'This was my first time directing. Ideas I had only ever drawn or styled suddenly came with a crew, a schedule and a client attached.' },
+            { title: 'On planning.', text: 'Most of the film was decided before the shoot — in the script, the storyboard, the location visits and the pre-production meeting. The planning was the creative work.' },
+            { title: 'On defending a choice.', text: 'With production, casting, locations and art all weighing in, a creative call only held if we could explain how it served the brief.' },
           ],
         },
       ],
