@@ -170,8 +170,9 @@ export const projects: Project[] = [
       facts: [
         { label: 'Context', value: 'Blue Jay Eindhoven, deep-tech drone venture' },
         { label: 'Role', value: 'Founder & lead of AI sub-team (7 engineers)' },
-        { label: 'Built with', value: 'Python · TensorFlow · Computer vision · NVIDIA Jetson Nano' },
+        { label: 'Built with', value: 'Python · TensorFlow · Computer vision · NLP · NVIDIA Jetson Nano' },
         { label: 'Partners', value: 'SAS · Philips' },
+        { label: 'Press', value: 'Cursor, TU/e · June 2019 ↗', href: 'https://www.cursor.tue.nl/en/news/2019/juni/week-4/blue-jay-introduces-autonomous-drone-in-football-stadium' },
       ],
       hero: { kind: 'image', src: '/projects/blue-jay/psv-team.jpg', alt: 'The Blue Jay team with the drones on the pitch at PSV Stadium' },
       sections: [
@@ -187,6 +188,7 @@ export const projects: Project[] = [
             { title: 'Fly in.', text: 'The drone navigates autonomously into areas rescuers can’t safely reach.' },
             { title: 'Detect distress.', text: 'An on-board vision model looks for people sitting or lying down, or showing signs of pain.' },
             { title: 'Report back.', text: 'When it finds someone, it sends a notification to the rescue team.' },
+            { title: 'Talk to it.', text: 'It was designed as a friendly, interactive drone rather than a scary one. We explored NLP so people could talk to it and ask it things, like the weather.' },
             { title: 'Think on the edge.', text: 'The model runs on the drone itself, so it keeps working without a connection.' },
           ],
         },
@@ -206,7 +208,7 @@ export const projects: Project[] = [
             { title: 'Built the AI team.', text: 'Started Blue Jay Eindhoven’s first AI sub-team and grew it to seven engineers.' },
             { title: 'Data & models.', text: 'We collected and hand-labelled our own training data and built the detection models in Python and TensorFlow, working with SAS and Philips on models and data.' },
             { title: 'Roadmap & feasibility.', text: 'Owned the AI backlog and sat with the other leads — hardware, software, human–technology interaction — to decide what the drone could realistically do.' },
-            { title: 'Telling the story.', text: 'Presented the drone at the SAS Analytics Forum and other events and AI talks, explaining computer vision and edge AI to technical and non-technical audiences.' },
+            { title: 'Telling the story.', text: 'Presented the drone and gave talks at Dutch Design Week, the SAS Analytics Forum and Brainport events, explaining computer vision and edge AI to technical and non-technical audiences.' },
           ],
         },
         {
