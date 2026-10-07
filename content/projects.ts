@@ -195,8 +195,8 @@ export const projects: Project[] = [
           heading: 'The drone',
           aspect: '3 / 2',
           items: [
-            { src: '/projects/blue-jay/main-drone.jpg', alt: 'The main Blue Jay drone on display at an event stand', caption: 'Our main drone, on display at the drones area.' },
-            { src: '/projects/blue-jay/explaining.jpg', alt: 'Explaining the drone to a guest at a Blue Jay event', caption: 'Walking a guest through how the drone works.' },
+            { src: '/projects/blue-jay/main-drone.jpg', alt: 'A Blue Jay drone on display at an event stand', caption: 'A Blue Jay drone on display at the drones area.' },
+            { src: '/projects/blue-jay/explaining.jpg', alt: 'Explaining the main Blue Jay drone to a guest at an event', caption: 'Walking a guest through our main drone.' },
           ],
         },
         {
@@ -237,7 +237,7 @@ export const projects: Project[] = [
           kind: 'steps',
           heading: 'What I learned',
           steps: [
-            { title: 'On edge AI.', text: 'This was my first real work in AI, and running it on the device itself was still new territory. We ran several feasibility checks as a team on which hardware to use and how it would fit. Integrating it into the main drone failed a few times, so we built a second drone just for detection. The lesson: hardware decides what the AI can do.' },
+            { title: 'On edge AI.', text: 'This was my first real work in AI, and running it on the device itself was still new territory. We ran several feasibility checks as a team on which hardware to use and how it would fit. With the time we had, we couldn’t integrate everything into the main drone, so we mounted the Jetson on a separate drone just for detection. The lesson: hardware decides what the AI can do.' },
             { title: 'On data.', text: 'Off-the-shelf datasets didn’t show people in distress from above. Collecting and labelling our own data was slow, unglamorous, and the reason it worked.' },
             { title: 'On the full process.', text: 'I guided the ML process end to end, from collecting data to launch, and taught it to the team as we went. This is where I found out I love working with AI.' },
             { title: 'On leading.', text: 'Starting a team from zero meant deciding what not to build. Sitting with the other leads taught me that feasibility is a team conversation, not a solo call.' },
