@@ -10,6 +10,7 @@ export type Section =
 
 export type Project = {
   slug: string;
+  creative?: boolean; // lives under /creative, not in the Projects list
   title: string;
   meta: [string, string]; // two short metadata lines
   year: string;
@@ -249,5 +250,63 @@ export const projects: Project[] = [
       ],
     },
   },
-  { slug: 'welkom-online', title: 'Welkom Online', meta: ['Campaign', 'Storytelling & direction'], year: '[Year]', status: 'Page coming' },
+  {
+    slug: 'welkom-online',
+    creative: true,
+    title: 'Welkom Online',
+    meta: ['Campaign', 'Co-director'],
+    year: '2023',
+    page: {
+      summary: 'A Vodafone × Ziggo campaign film I co-directed to help older adults in the Netherlands get online — told through the family around them.',
+      facts: [
+        { label: 'Client', value: 'Vodafone × Ziggo · Welkom Online' },
+        { label: 'Programme', value: '+PlusOne Amsterdam, selected 1 of 25' },
+        { label: 'Role', value: 'Co-director' },
+        { label: 'Film', value: '“Grandpa’s Tall Tales” · shot July 2023' },
+        { label: 'Aired', value: 'Dutch TV & station screens' },
+      ],
+      hero: { kind: 'image', src: '/creative/welkom-online/monitor.jpg', alt: 'Watching a take on the monitor with my co-director on set' },
+      sections: [
+        {
+          kind: 'text',
+          heading: 'The brief',
+          body: [
+            'Welkom Online is Ziggo’s programme for people who have rarely or never been online. The brief: a campaign for the family, friends and caregivers of people over 65 — that still speaks to the older adults themselves.',
+            'The goal was to help them move everyday things like entertainment, staying in touch and daily tasks online, with confidence, by showing that the internet is a safe place that can make everyday life better.',
+          ],
+        },
+        {
+          kind: 'text',
+          heading: 'The insight',
+          body: ['Older adults raised their children with their own view of the world. Now the tables have turned, and their children and grandchildren are the ones explaining how things work. That is hard, and the film starts from there.'],
+        },
+        {
+          kind: 'steps',
+          heading: 'What I did',
+          steps: [
+            { title: 'Wrote the script.', text: 'Developed the story and script together with the copywriter.' },
+            { title: 'Planned the shoot.', text: 'Turned the script into a shot plan and storyboard the whole crew could work from.' },
+            { title: 'Brought the teams together.', text: 'Coordinated production, casting, locations and art department to get the right people, places and set — defending our creative choices along the way — and led the pre-production meeting.' },
+            { title: 'Scouted locations.', text: 'Walked each location to check that our frames would work there before the shoot.' },
+            { title: 'Directed the shoot.', text: 'Co-directed on set: performances, framing and keeping the day on schedule.' },
+            { title: 'Shaped the edit.', text: 'Assisted in post-production through to the final film.' },
+          ],
+        },
+        {
+          kind: 'gallery',
+          heading: 'On set',
+          aspect: '4 / 5',
+          items: [
+            { src: '/creative/welkom-online/monitor-clip.mp4', poster: '/creative/welkom-online/monitor-clip-poster.jpg', video: true, alt: 'Slating a take of Grandpa’s Tall Tales, seen on the monitor', caption: 'Slating a take, seen from video village.' },
+            { src: '/creative/welkom-online/on-comms.jpg', alt: 'On comms beside the monitor during the shoot', caption: 'On comms at the monitor between takes.' },
+            { src: '/creative/welkom-online/camera.jpg', alt: 'Camera on a dolly setting up a shot', caption: 'Setting up a shot.' },
+            { src: '/creative/welkom-online/clapper.jpg', alt: 'Clapperboard for PlusPlusOne × VodafoneZiggo, Grandpa’s Tall Tales', caption: 'The slate, July 2023.' },
+          ],
+        },
+      ],
+    },
+  },
 ];
+
+export const productProjects = projects.filter(p => !p.creative);
+export const creativeProjects = projects.filter(p => p.creative);

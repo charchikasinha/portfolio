@@ -16,7 +16,7 @@ export default function CareerPage() {
           <h1>Career</h1>
           <div className="side career-side">
             <ResumeLinks />
-            <a href="#creative" className="u mono jump">Creative work ↓</a>
+            <a href="#creative" className="u mono jump">Creative endeavours ↓</a>
           </div>
         </div>
         <p className="journey-intro">{careerIntro}</p>
@@ -64,6 +64,7 @@ export default function CareerPage() {
                 <h4>{c.title}</h4>
                 <div className="mono muted">{c.role}</div>
                 <p>{c.text}</p>
+                {'href' in c && c.href && <Link className="u mono entry-link" href={c.href}>See the project →</Link>}
               </div>
             ))}
           </div>

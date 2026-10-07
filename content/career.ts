@@ -91,7 +91,7 @@ export const roles: Role[] = [
 export const creative = {
   intro: 'Alongside the main path, I art-direct campaigns and build brands.',
   items: [
-    { title: 'Vodafone × Ziggo — “Welkom Online”', role: 'Co-director · +PlusOne Amsterdam', text: 'Selected for Amsterdam’s +PlusOne creative leadership program (1 of 25). Co-directed a campaign for older adults from script to edit; it aired on Dutch TV and station screens.' },
+    { title: 'Vodafone × Ziggo — “Welkom Online”', role: 'Co-director · +PlusOne Amsterdam · 2023', href: '/creative/welkom-online', text: 'Selected for Amsterdam’s +PlusOne creative leadership program (1 of 25). Co-directed a campaign film for older adults from script to edit; it aired on Dutch TV and station screens.' },
     { title: 'ASPIRA', role: 'Head of Marketing', text: 'Built positioning for an early-stage athleisure brand — manifesto, voice and visual identity — and launched an athlete-storytelling content program.' },
     { title: 'Treesistance', role: 'Brand & art direction', text: 'Shaped brand strategy and visuals for a rainforest NGO; the work carried into co-branded partnerships that raised funds for forest protectors.' },
   ],

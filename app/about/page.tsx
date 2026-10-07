@@ -42,6 +42,7 @@ export default function AboutPage() {
             <h2 className="mono">Creative practice</h2>
             <p>Alongside product work I’ve art-directed campaigns, identities and album covers. It’s where my eye for detail comes from.</p>
             <div className="mono" style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
+              <Link className="u" href="/creative/welkom-online">Welkom Online →</Link>
               <Link className="u" href="/creative/cassets">Cassets →</Link>
               <a className="u" href={site.links.behance} target="_blank" rel="noopener noreferrer">Behance ↗</a>
             </div>
