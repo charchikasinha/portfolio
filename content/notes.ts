@@ -1,4 +1,6 @@
 // Notes: short writing, videos, or an image + a thought. Newest first.
+// Set to true when the first real note is ready; until then Notes is hidden from the menu and the page 404s.
+export const notesLive = false;
 export type Note = {
   id: string;
   title: string;

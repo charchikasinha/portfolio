@@ -1,11 +1,13 @@
 import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { notes } from '@/content/notes';
+import { notFound } from 'next/navigation';
+import { notes, notesLive } from '@/content/notes';
 
 export const metadata: Metadata = { title: 'Notes' };
 
 export default function NotesPage() {
+  if (!notesLive) notFound();
   return (
     <>
       <Header />
