@@ -38,10 +38,10 @@ export const roles: Role[] = [
       {
         group: 'Product ownership & roadmap',
         items: [
-          'Owned the roadmap and quarterly releases for Acerta’s Connect HR Office, from discovery through UAT and launch',
+          'Owned the roadmap and quarterly releases for the B2B HR & payroll product of a leading Belgian HR services provider, from discovery through UAT and launch',
           'Prioritized an oversubscribed backlog across legal changes, customer requests and IT dependencies; shipped every regulatory change on deadline',
-          'Redesigned customer service on Acerta’s core platform (3M+ records), merging 5 case types, 2 workspaces and 6 dashboards into one',
-          'Rebuilt fragile CRM and IT change workflows at IMEC, retiring ~€150K in tech debt',
+          'Redesigned customer service on the core platform of a leading Belgian HR services provider (3M+ records), merging 5 case types, 2 workspaces and 6 dashboards into one',
+          'Rebuilt fragile CRM and IT change workflows at a global semiconductor R&D leader, retiring ~€150K in tech debt',
         ],
       },
       {
@@ -54,9 +54,9 @@ export const roles: Role[] = [
       {
         group: 'Customer impact & leadership',
         items: [
-          'Pitched a reusable onboarding blueprint at IMEC, cutting per-onboarding cost ~50% and saving ~€200K',
-          'Ran discovery with 20+ European Commission directorates; shipped pilots in 2.5 months and won 14 directorates’ commitment to full rollout',
-          'Won over a skeptical IMEC C-suite with a live AI sandbox demo, helping secure a ~€2M annual license upgrade',
+          'Pitched a reusable onboarding blueprint at a global semiconductor R&D leader, cutting per-onboarding cost ~50% and saving ~€200K',
+          'Ran discovery with 20+ directorates of a major EU institution; shipped pilots in 2.5 months and won 14 directorates’ commitment to full rollout',
+          'Won over the skeptical C-suite of a global semiconductor R&D leader with a live AI sandbox demo, helping secure a ~€2M annual license upgrade',
           'Led the firm’s first managed-capacity engagement for its largest account (~€2M ARR), running a 15-person team; the client renewed',
         ],
       },
