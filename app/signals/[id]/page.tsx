@@ -40,6 +40,7 @@ export default async function SignalPage({ params }: Params) {
             <h1>{s.title}</h1>
             <div className="mono muted">{s.place} — {s.date}</div>
             <p className="thought">{s.thought}</p>
+            {s.link && <Link className="u mono entry-link" href={s.link.href}>{s.link.label} →</Link>}
             <div className="kv mono">
               <span className="muted">Kind</span><span>{s.kind}</span>
               <span className="muted">Ink</span><span><span className="swatch" style={{ background: swatch }} />{inkName[s.ink]}</span>

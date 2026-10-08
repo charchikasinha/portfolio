@@ -10,6 +10,7 @@ export type Signal = {
   image: string;
   ink: 'mono' | 'signal' | 'photo';
   inkColor?: string; // used when ink = 'signal'
+  link?: { label: string; href: string };
 };
 
 export const signals: Signal[] = [
@@ -18,7 +19,8 @@ export const signals: Signal[] = [
     title: 'SF Tech Week',
     place: 'San Francisco',
     date: '05.10.26',
-    thought: '[One line on what caught your attention at a Design × Tech event this week.]',
+    thought: 'Built my first unethical product at SF Tech Week. On purpose.',
+    link: { label: 'See Baby Perfect', href: '/projects/baby-perfect' },
     kind: 'Place / Event',
     image: '/signals/001.jpg', // stand-in still life (rendered); replace with a real photo
     ink: 'mono',
