@@ -29,10 +29,11 @@ export const projects: Project[] = [
     title: 'Living Storyboard',
     meta: ['AI / Product', 'Real-time video'],
     year: '2026',
+    status: '3rd prize',
     page: {
       summary: 'Previz you can direct — steer a live video model mid-shot, keep the takes that work, leave with a storyboard.',
       facts: [
-        { label: 'Context', value: 'Visko Orbis Online Challenge, Sep 2026' },
+        { label: 'Context', value: 'Visko Orbis Online Challenge, Sep 2026 · 3rd prize' },
         { label: 'Role', value: 'Concept, product design, build' },
         { label: 'Built with', value: 'Claude · Orbis via Reactor SDK · Gemini · Next.js · Pen.dev' },
         { label: 'Code', value: 'GitHub ↗', href: 'https://github.com/charchikasinha/living-storyboard' },
