@@ -3,9 +3,12 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import ResumeLinks from '@/components/ResumeLinks';
-import { careerIntro, roles, creative } from '@/content/career';
+import { careerIntro, chapters, creative } from '@/content/career';
 
 export const metadata: Metadata = { title: 'Career' };
+
+const A = ({ href, children }: { href: string; children: React.ReactNode }) =>
+  href.startsWith('#') ? <a className="u mono entry-link" href={href}>{children}</a> : <Link className="u mono entry-link" href={href}>{children}</Link>;
 
 export default function CareerPage() {
   return (
@@ -19,36 +22,34 @@ export default function CareerPage() {
             <a href="#creative" className="u mono jump">Creative endeavours ↓</a>
           </div>
         </div>
-        <p className="journey-intro">{careerIntro}</p>
+        <div className="journey-intro">{careerIntro.map((p, i) => <p key={i}>{p}</p>)}</div>
         <div className="tl">
-          {roles.map(r => (
-            <article className="entry" key={r.company}>
+          {chapters.map(c => (
+            <article className="entry chapter" key={c.n}>
               <div className="mono entry-side">
-                <span>{r.years}</span>
-                <span className="muted">{r.tag}</span>
+                <span>{c.n}</span>
+                <span className="muted">{c.years}</span>
               </div>
               <div>
-                <h3>{r.company}</h3>
-                <div className="desc" style={{ marginTop: 12 }}>{r.role}</div>
-                <p className="journey-body">{r.body}</p>
-                {r.highlights && (
-                  <ul className="hl">
-                    {r.highlights.map(h => <li key={h}><span className="dot" />{h}</li>)}
+                <h3>{c.title}</h3>
+                <p className="org">{c.org}</p>
+                {c.body.map((b, i) => <p className="journey-body" key={i}>{b}</p>)}
+                {c.hats && (
+                  <ul className="hats">
+                    {c.hats.map(h => <li key={h.title}><b>{h.title}</b> {h.text}</li>)}
                   </ul>
                 )}
-                {r.more && (
-                  <details className="more">
-                    <summary className="mono">See all the work <span aria-hidden="true">↓</span></summary>
-                    {r.more.map(g => (
-                      <div className="more-group" key={g.group}>
-                        <div className="mono muted">{g.group}</div>
-                        <ul>{g.items.map(i => <li key={i}>{i}</li>)}</ul>
-                      </div>
-                    ))}
-                  </details>
+                {c.list && <ul className="hl">{c.list.map(h => <li key={h}><span className="dot" />{h}</li>)}</ul>}
+                {c.after?.map((b, i) => <p className="journey-body" key={i}>{b}</p>)}
+                {(c.highlight || c.links) && (
+                  <div className="chapter-links">
+                    {c.links?.map(l => <A key={l.href} href={l.href}>{l.label} →</A>)}
+                    {c.highlight && <span className="proof mono"><span className="dot" />{c.highlight}</span>}
+                  </div>
                 )}
-                {r.note && <div className="mono muted entry-note">{r.note}</div>}
-                {r.link && <Link className="u mono entry-link" href={r.link.href}>{r.link.label} →</Link>}
+                {c.next && (
+                  <p className="next-line">→ {c.next.text}{c.next.link && <> <A href={c.next.link.href}>{c.next.link.label} →</A></>}</p>
+                )}
               </div>
             </article>
           ))}
