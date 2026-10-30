@@ -101,6 +101,7 @@ export default function DotArt({ mode = 'relief', src, ink = 'mono', inkColor = 
         const y2 = p[1] * cp - z1 * sp, z2 = p[1] * sp + z1 * cp;
         const f = 2.4 / (2.4 + z2), rad = (0.12 + p[3] * 0.88) * cell * 0.56 * f;
         if (rad < 0.35 && ink !== 'photo') continue;
+        if (ink === 'photo' && p[3] < 0.07) continue; // skip near-white background in colour mode
         const px = cx + x1 * sc * f, py = cy + y2 * sc * f;
         if (ink === 'photo') { ctx.fillStyle = p[4]; ctx.beginPath(); ctx.arc(px, py, Math.max(rad, cell * 0.38), 0, 6.2832); ctx.fill(); }
         else { ctx.moveTo(px + rad, py); ctx.arc(px, py, rad, 0, 6.2832); }

@@ -15,6 +15,16 @@ export type Signal = {
 
 export const signals: Signal[] = [
   {
+    id: '003',
+    title: 'Gishbeu',
+    place: 'Berkeley Haas',
+    date: '29.10.26',
+    thought: 'Some things take 14 years. Roza Marchenko and Marco de Molina taught us Gishbeu at Haas, a toast to everyone who got you here. In the middle of a fast MBA, slowing down to say thank you felt really good.',
+    kind: 'Talk / Tasting',
+    image: '/signals/003.jpg',
+    ink: 'photo',
+  },
+  {
     id: '002',
     title: 'Bix',
     place: 'Jackson Square, San Francisco',
