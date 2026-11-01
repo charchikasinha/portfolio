@@ -32,7 +32,7 @@ export default async function SignalPage({ params }: Params) {
       <Header />
       <main id="main" className="wrap">
         <div className="sigpage">
-          <DotArt src={s.image} ink={s.ink} inkColor={s.inkColor} label={`Signal ${s.id}: ${s.title}, as a field of dots you can drag to turn.`} />
+          <DotArt src={s.image} ink={s.ink} inkColor={s.inkColor} density={s.density} label={`Signal ${s.id}: ${s.title}, as a field of dots you can drag to turn.`} />
           <div>
             <div className="mono" style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <span className="dot" />{isCurrent ? 'Current Signal' : 'Signal'} / {s.id}

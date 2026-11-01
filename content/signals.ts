@@ -11,6 +11,7 @@ export type Signal = {
   ink: 'mono' | 'signal' | 'photo';
   inkColor?: string; // used when ink = 'signal'
   link?: { label: string; href: string };
+  density?: number; // dots across; higher shows finer detail
 };
 
 export const signals: Signal[] = [
@@ -23,6 +24,7 @@ export const signals: Signal[] = [
     kind: 'Talk / Tasting',
     image: '/signals/003.jpg',
     ink: 'photo',
+    density: 150,
   },
   {
     id: '002',

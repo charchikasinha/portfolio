@@ -10,7 +10,7 @@ export default function Home() {
     <div className="landing">
       <Header showTagline />
       <main id="main">
-        <DotArt src={s.image} ink={s.ink} inkColor={s.inkColor} label={`Current signal: ${s.title}, as a field of dots you can drag to turn.`} />
+        <DotArt src={s.image} ink={s.ink} inkColor={s.inkColor} density={s.density} label={`Current signal: ${s.title}, as a field of dots you can drag to turn.`} />
       </main>
       <div className="landfoot mono">
         <span className="muted">{site.location}</span>

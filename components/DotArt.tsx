@@ -4,6 +4,7 @@ import { useEffect, useRef } from 'react';
 type Props = {
   mode?: 'relief' | 'globe';
   src?: string; // photo for relief mode
+  density?: number; // dots across the image (default 92)
   ink?: 'mono' | 'signal' | 'photo';
   inkColor?: string;
   pin?: { lat: number; lon: number; label: string }; // globe mode
@@ -17,7 +18,7 @@ type Pt = [number, number, number, number, string];
  * Turns a photo into a field of halftone dots with depth (darker = bigger, further forward),
  * which the visitor can drag to turn. Globe mode draws land as dots with a pinned signal.
  */
-export default function DotArt({ mode = 'relief', src, ink = 'mono', inkColor = '#9E3B26', pin, className = 'art-canvas', label }: Props) {
+export default function DotArt({ mode = 'relief', src, ink = 'mono', inkColor = '#9E3B26', pin, className = 'art-canvas', label, density = 92 }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function DotArt({ mode = 'relief', src, ink = 'mono', inkColor = 
     let drag: { x: number; y: number } | null = null;
     let pts: Pt[] | null = null;
     let land: [number, number][] | null = null;
-    let cols = 92, aspect = 1.26, raf = 0;
+    let cols = density, aspect = 1.26, raf = 0;
     const t0 = performance.now();
 
     if (mode === 'relief' && src) {
@@ -162,7 +163,7 @@ export default function DotArt({ mode = 'relief', src, ink = 'mono', inkColor = 
       cv.removeEventListener('pointerup', up);
       cv.removeEventListener('pointercancel', up);
     };
-  }, [mode, src, ink, inkColor, pin]);
+  }, [mode, src, ink, inkColor, pin, density]);
 
   return <canvas ref={ref} className={className} role="img" aria-label={label} />;
 }
