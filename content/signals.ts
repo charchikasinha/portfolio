@@ -19,7 +19,7 @@ export const signals: Signal[] = [
     title: 'Gishbeu',
     place: 'Berkeley Haas',
     date: '29.10.26',
-    thought: 'Some things take 14 years. Roza Marchenko and Marco de Molina taught us Gishbeu at Haas, a toast to everyone who got you here. In the middle of a fast MBA, slowing down to say thank you felt really good.',
+    thought: 'A mezcal whose agave takes over a decade to grow, and a toast that thanks everyone who got you here: Gishbeu. Roza Marchenko and Marco de Molina shared both at Haas. In the middle of a fast MBA, slowing down to say thank you felt really good.',
     kind: 'Talk / Tasting',
     image: '/signals/003.jpg',
     ink: 'photo',
