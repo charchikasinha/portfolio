@@ -20,7 +20,7 @@ export const signals: Signal[] = [
     title: 'Storyverse',
     place: 'Fig AI Design Makeathon',
     date: '12.11.26',
-    thought: "Before directing a single frame, I created the characters. My film for Pika's Storyverse track started with my mother, as the doctor she once dreamed of becoming.",
+    thought: "Before directing a single frame, I created the characters. Character first, then the story: my entry for Pika's Storyverse track.",
     kind: 'Makeathon / Film',
     image: '/signals/004.jpg',
     ink: 'photo',
