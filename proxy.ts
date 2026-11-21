@@ -7,7 +7,7 @@ const BLOCKED_HOST = 'charchika-sinha.vercel.app';
 export function proxy(req: NextRequest) {
   const host = (req.headers.get('host') || '').toLowerCase();
   if (host === BLOCKED_HOST) {
-    const res = NextResponse.redirect('https://www.linkedin.com/in/roshini-narayanan/', 307);
+    const res = NextResponse.redirect('https://haas.campusgroups.com/feeds?type=club&type_id=73677&tab=about', 307);
     res.headers.set('cache-control', 'no-store');
     return res;
   }
